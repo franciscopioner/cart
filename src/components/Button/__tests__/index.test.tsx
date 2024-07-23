@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Button from '../src/components/Button';
+import Button from '../index';
 
 describe('Componente Button', () => {
   it('renderiza com os filhos', () => {
@@ -17,13 +17,13 @@ describe('Componente Button', () => {
   });
 
   it('aplica o estilo arredondado quando a prop rounded é true', () => {
-    const { container } = render(<Button rounded>Comprar</Button>);
+    const { container } = render(<Button rounded="true">Comprar</Button>);
     const button = container.firstChild as HTMLElement;
     expect(button).toHaveStyle('background-color: rgb(2, 138, 31)');
   });
 
   it('não aplica o estilo arredondado quando a prop rounded é false', () => {
-    const { container } = render(<Button rounded={false}>Comprar</Button>);
+    const { container } = render(<Button rounded="false">Comprar</Button>);
     const button = container.firstChild as HTMLElement;
     expect(button).toHaveStyle('background-color: rgb(240, 240, 240)');
   });

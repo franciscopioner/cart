@@ -30,7 +30,7 @@ const ProductList: React.FC = () => {
           <p>{product.description}</p>
           <ProductFooter>
             <Price>{formatPrice(product.price)}</Price>
-            <Button rounded onClick={() => dispatch(addToCart(product))}>Comprar</Button>
+            <Button rounded="true" onClick={() => dispatch(addToCart(product))}>Comprar</Button>
           </ProductFooter>
         </ProductCard>
       ))}

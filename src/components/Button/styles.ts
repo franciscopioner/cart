@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface StyledButtonProps  {
-  rounded?: boolean;
+  rounded?: string;
 }
 
 const roundedStyles = css`
@@ -32,5 +32,5 @@ export const StyledButton = styled.button<StyledButtonProps >`
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 
-  ${({ rounded }) => (rounded ? roundedStyles : normalStyles)}
+  ${({ rounded }) => (rounded === "true" ? roundedStyles : normalStyles)}
 `;

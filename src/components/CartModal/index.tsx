@@ -66,7 +66,7 @@ const CartModal: React.FC = () => {
           )}
         </ModalContent>
         <ModalFooter>
-          <Button rounded onClick={() => dispatch(toggleCart())}>Concluir compras</Button>
+          <Button rounded="true" onClick={() => dispatch(toggleCart())}>Concluir compras</Button>
           <Button onClick={handleClearCart}>Cancelar</Button>
         </ModalFooter>
       </ModalContainer>

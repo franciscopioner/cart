@@ -3,12 +3,12 @@ import React from 'react';
 import { StyledButton } from './styles';
 
 interface ButtonProps {
-  rounded?: boolean;
+  rounded?: string;
   onClick?: () => void;
   children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ rounded = false, onClick, children }) => {
+const Button: React.FC<ButtonProps> = ({ rounded = "false", onClick, children }) => {
   return (
     <StyledButton rounded={rounded} onClick={onClick}>
       {children}
