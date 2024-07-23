@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface ButtonProps {
+interface StyledButtonProps  {
   rounded?: boolean;
 }
 
@@ -24,7 +24,7 @@ const normalStyles = css`
   }
 `;
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<StyledButtonProps >`
   border-radius: 16px;
   border: none;
   padding: 6px 16px;
