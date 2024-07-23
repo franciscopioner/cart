@@ -14,7 +14,7 @@ const nextConfig = {
         name: 'cart',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './cart': './src/components',
+          './cart': './src/components/Cart',
         },
         extraOptions: {
           exposePages: true
